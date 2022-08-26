@@ -21,7 +21,8 @@
     "version": "yarn run build && auto-changelog -p --template keepachangelog && git add .",
     "prepublishOnly": "git push && git push --tags && gh-release",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "gotrue-js": "^0.9.25"
